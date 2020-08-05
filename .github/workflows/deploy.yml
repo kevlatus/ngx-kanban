@@ -36,6 +36,11 @@ jobs:
       - name: run demo tests
         run: npm run test:demo
 
+      - name: copy README and LICENSE
+        run: |
+          cp LICENSE dist/ngx-kanban
+          cp README.md dist/ngx-kanban
+
       - name: upload build outputs
         uses: actions/upload-artifact@v2
         with:
