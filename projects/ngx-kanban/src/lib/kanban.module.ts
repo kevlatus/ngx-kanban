@@ -15,6 +15,7 @@ import { DropZoneComponent } from './internal/drop-zone/drop-zone.component';
 import { DropZoneListComponent } from './internal/drop-zone-list/drop-zone-list.component';
 import { FilterByLabelsPipe } from './internal/filter-by-labels.pipe';
 import { SortColumnDataPipe } from './internal/sort-column-data.pipe';
+import { FilterByPredicatePipe } from './internal/filter-by-predicate.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SortColumnDataPipe } from './internal/sort-column-data.pipe';
     FilterByLabelsPipe,
     BoardComponent,
     SortColumnDataPipe,
+    FilterByPredicatePipe,
   ],
   imports: [CommonModule, DragDropModule],
   exports: [

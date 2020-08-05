@@ -21,6 +21,7 @@ import { CardDefDirective } from '../card-def.directive';
 import { ColumnDefDirective } from '../column-def.directive';
 import {
   ColumnSorter,
+  DataFilter,
   defaultColumnSorter,
   defaultDropValidator,
   DropValidator,
@@ -54,6 +55,7 @@ export class BoardComponent<T extends KanbanData = KanbanData>
   @Input() public visibleColumns: string[];
   @Input() public dropValidator: DropValidator = defaultDropValidator;
   @Input() public columnSorter: ColumnSorter = defaultColumnSorter;
+  @Input() public dataFilter: DataFilter;
 
   @Output() public readonly cardDrop = new EventEmitter<KanbanDrop<T>>();
 

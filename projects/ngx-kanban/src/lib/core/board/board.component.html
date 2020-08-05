@@ -12,7 +12,10 @@
       *kanbanContentDef="let column"
       [column]="column"
       [data]="
-        data | filterByLabels: column.labels | sortColumnData: columnSorter
+        data
+          | filterByPredicate: dataFilter
+          | filterByLabels: column.labels
+          | sortColumnData: columnSorter
       "
     ></kanban-column-content>
   </kanban-column-layout>

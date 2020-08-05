@@ -49,3 +49,7 @@ export function defaultColumnSorter(a: KanbanData, b: KanbanData): number {
   }
   return 0;
 }
+
+export type DataFilter = (data: KanbanData) => boolean;
+
+export const defaultDataFilter: DataFilter = (data: KanbanData) => true;
