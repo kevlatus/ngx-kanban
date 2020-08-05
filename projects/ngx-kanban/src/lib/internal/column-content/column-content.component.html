@@ -1,0 +1,10 @@
+<kanban-drop-zone-list
+  [column]="column"
+  [class.visible]="kanban.isDragging$ | async"
+></kanban-drop-zone-list>
+
+<kanban-card-list
+  [data]="data"
+  [column]="column"
+  [class.visible]="kanban.isNotDragging$ | async"
+></kanban-card-list>

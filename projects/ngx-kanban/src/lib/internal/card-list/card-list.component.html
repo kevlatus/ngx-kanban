@@ -1,0 +1,16 @@
+<div cdkDropList class="cards">
+  <ng-container *ngFor="let d of data">
+    <div
+      cdkDrag
+      class="card-container"
+      [cdkDragData]="d"
+      (cdkDragStarted)="onDragStarted($event)"
+      (cdkDragEnded)="onDragEnded($event)"
+    >
+      <div *cdkDragPlaceholder></div>
+      <ng-container
+        *ngTemplateOutlet="column.cardTemplate; context: { $implicit: d }"
+      ></ng-container>
+    </div>
+  </ng-container>
+</div>

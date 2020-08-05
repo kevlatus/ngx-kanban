@@ -1,0 +1,29 @@
+<div class="filter">
+  <div>
+    <input
+      id="ascending"
+      type="checkbox"
+      [checked]="ascending"
+      (change)="onAscendingChanged($event)"
+    />
+    <label for="ascending">Ascending</label>
+  </div>
+</div>
+
+<kanban-board
+  [data]="data"
+  (cardDrop)="onDropped($event)"
+  [dropValidator]="dropValidator"
+  [columnSorter]="columnSorter"
+>
+  <kanban-card *kanbanCardDef="let item">
+    <div title>{{ item.title }}</div>
+    <div footer>Status: {{ item.labelId }}</div>
+  </kanban-card>
+
+  <ng-container
+    *ngFor="let col of columns"
+    [kanbanColumnDef]="col.name"
+    [labels]="col.labels"
+  ></ng-container>
+</kanban-board>

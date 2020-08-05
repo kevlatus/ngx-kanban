@@ -1,0 +1,19 @@
+<ng-container cdkDropListGroup>
+  <kanban-column-layout [columns]="columns" class="header">
+    <kanban-column-heading
+      *kanbanContentDef="let column"
+      [column]="column"
+      [data]="data | filterByLabels: column.labels"
+    ></kanban-column-heading>
+  </kanban-column-layout>
+
+  <kanban-column-layout [columns]="columns" class="content">
+    <kanban-column-content
+      *kanbanContentDef="let column"
+      [column]="column"
+      [data]="
+        data | filterByLabels: column.labels | sortColumnData: columnSorter
+      "
+    ></kanban-column-content>
+  </kanban-column-layout>
+</ng-container>

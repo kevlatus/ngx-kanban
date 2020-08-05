@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+}
+
+kanban-board {
+  height: calc(100% - 56px);
+}

@@ -1,0 +1,7 @@
+<ng-container *ngFor="let c of columns">
+  <div class="content">
+    <ng-container
+      *ngTemplateOutlet="content.template; context: { $implicit: c }"
+    ></ng-container>
+  </div>
+</ng-container>

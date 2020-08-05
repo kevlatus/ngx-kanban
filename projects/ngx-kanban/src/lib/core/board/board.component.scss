@@ -1,0 +1,9 @@
+.header {
+  height: 72px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-height: calc(100% - 72px);
+  overflow: hidden;
+}

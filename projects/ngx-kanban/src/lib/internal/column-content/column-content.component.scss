@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  position: relative;
+  margin: 0 8px;
+  height: 100%;
+}
+
+kanban-drop-zone-list,
+kanban-card-list {
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+  }
+}
+
+kanban-drop-zone-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+kanban-card-list {
+  overflow-y: auto;
+  padding: 8px;
+  margin-top: 8px;
+  height: calc(100% - 24px);
+}

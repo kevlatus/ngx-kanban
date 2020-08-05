@@ -1,0 +1,45 @@
+{
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --project=demo-app",
+    "build": "ng build",
+    "test": "jest --config ./projects/ngx-kanban/jest.config.js",
+    "test:demo": "jest --config ./projects/demo-app/jest.config.js",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "watch": "ng build --watch",
+    "copy-files": "cpx LICENSE ./dist/ngx-kanban && cpx README.md ./dist/ngx-kanban"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~10.0.5",
+    "@angular/cdk": "^10.1.0",
+    "@angular/common": "~10.0.5",
+    "@angular/compiler": "~10.0.5",
+    "@angular/core": "~10.0.5",
+    "@angular/forms": "~10.0.5",
+    "@angular/platform-browser": "~10.0.5",
+    "@angular/platform-browser-dynamic": "~10.0.5",
+    "@angular/router": "~10.0.5",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1000.4",
+    "@angular-devkit/build-ng-packagr": "~0.1000.4",
+    "@angular/cli": "~10.0.4",
+    "@angular/compiler-cli": "~10.0.5",
+    "@types/jest": "^26.0.7",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
+    "jest": "^26.1.0",
+    "jest-preset-angular": "^8.2.1",
+    "ng-packagr": "^10.0.0",
+    "protractor": "~7.0.0",
+    "ts-jest": "^26.1.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.9.5"
+  }
+}
