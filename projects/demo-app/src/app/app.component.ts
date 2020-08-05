@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {
-  ColumnSorter,
-  defaultColumnSorter,
+  DataSorter,
+  defaultDataSorter,
   KanbanColumnDef,
   KanbanData,
   KanbanDrop,
@@ -55,9 +55,9 @@ export class AppComponent {
     return true;
   }
 
-  get columnSorter(): ColumnSorter {
+  get columnSorter(): DataSorter {
     return (a: KanbanData, b: KanbanData) =>
-      defaultColumnSorter(a, b) * (this.ascending ? 1 : -1);
+      defaultDataSorter(a, b) * (this.ascending ? 1 : -1);
   }
 
   onDropped($event: KanbanDrop<Task>): void {
