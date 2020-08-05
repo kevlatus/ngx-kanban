@@ -67,6 +67,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/ngx-kanban/",
               "fileReplacements": [
                 {
                   "replace": "projects/demo-app/src/environments/environment.ts",
