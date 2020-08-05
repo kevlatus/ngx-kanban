@@ -38,9 +38,9 @@ export function defaultDropValidator(_: KanbanDrop): boolean {
   return true;
 }
 
-export type ColumnSorter = (a: KanbanData, b: KanbanData) => number;
+export type DataSorter = (a: KanbanData, b: KanbanData) => number;
 
-export function defaultColumnSorter(a: KanbanData, b: KanbanData): number {
+export function defaultDataSorter(a: KanbanData, b: KanbanData): number {
   if (a.id > b.id) {
     return 1;
   }
