@@ -8,6 +8,7 @@ import { ContentDefDirective } from '../../internal/content-def.directive';
 import { DropZoneComponent } from '../../internal/drop-zone/drop-zone.component';
 import { DropZoneListComponent } from '../../internal/drop-zone-list/drop-zone-list.component';
 import { FilterByLabelsPipe } from '../../internal/filter-by-labels.pipe';
+import { FilterByPredicatePipe } from '../../internal/filter-by-predicate.pipe';
 import { KanbanService } from '../../internal/kanban.service';
 import { SortColumnDataPipe } from '../../internal/sort-column-data.pipe';
 import { CardDefDirective } from '../card-def.directive';
@@ -33,6 +34,7 @@ describe('BoardComponent', () => {
         DropZoneComponent,
         DropZoneListComponent,
         FilterByLabelsPipe,
+        FilterByPredicatePipe,
         SortColumnDataPipe,
       ],
       imports: [DragDropModule],
