@@ -116,24 +116,24 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-  publish-gpr:
-    needs: test
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-        with:
-          registry-url: 'https://npm.pkg.github.com/kevlatus'
-          scope: '@kevlatus'
-
-      - name: download build outputs
-        uses: actions/download-artifact@v2
-        with:
-          name: build-output
-
-      - name: publish to Github Package Registry
-        working-directory: ./dist/ngx-kanban
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#  publish-gpr:
+#    needs: test
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - uses: actions/checkout@master
+#      - uses: actions/setup-node@v1
+#        with:
+#          registry-url: 'https://npm.pkg.github.com/kevlatus'
+#          scope: '@kevlatus'
+#
+#      - name: download build outputs
+#        uses: actions/download-artifact@v2
+#        with:
+#          name: build-output
+#
+#      - name: publish to Github Package Registry
+#        working-directory: ./dist/ngx-kanban
+#        run: npm publish
+#        env:
+#          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
