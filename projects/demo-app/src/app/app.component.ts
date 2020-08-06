@@ -55,7 +55,7 @@ export class AppComponent {
     return true;
   }
 
-  get columnSorter(): DataSorter {
+  get sorter(): DataSorter {
     return (a: KanbanData, b: KanbanData) =>
       defaultDataSorter(a, b) * (this.ascending ? 1 : -1);
   }

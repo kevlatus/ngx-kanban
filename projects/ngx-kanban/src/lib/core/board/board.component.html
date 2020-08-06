@@ -13,9 +13,9 @@
       [column]="column"
       [data]="
         data
-          | filterByPredicate: dataFilter
+          | filterByPredicate: filter
           | filterByLabels: column.labels
-          | sortArray: columnSorter
+          | sortArray: sorter
       "
     ></kanban-column-content>
   </kanban-column-layout>

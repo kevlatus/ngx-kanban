@@ -14,7 +14,7 @@
   [data]="data"
   (cardDrop)="onDropped($event)"
   [dropValidator]="dropValidator"
-  [columnSorter]="columnSorter"
+  [sorter]="sorter"
 >
   <kanban-card *kanbanCardDef="let item">
     <div title>{{ item.title }}</div>
