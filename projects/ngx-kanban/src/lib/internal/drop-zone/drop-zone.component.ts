@@ -26,7 +26,7 @@ export class DropZoneComponent {
     const dropListLabelId = event.container.data.id;
     const itemLabelId = (event.item.data as KanbanData).labelId;
     if (dropListLabelId !== itemLabelId) {
-      this.kanban.dropCard(event.item.data, dropListLabelId);
+      this.kanban.dropDraggable(event.item.data, dropListLabelId);
     }
   }
 }

@@ -31,7 +31,7 @@ export class KanbanService {
     this.draggableSubject.next(data);
   }
 
-  public dropCard(data: KanbanData, newLabelId: string): void {
+  public dropDraggable(data: KanbanData, newLabelId: string): void {
     this.onDropSubject.next({ data, newLabelId });
   }
 }
